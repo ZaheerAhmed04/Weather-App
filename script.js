@@ -322,4 +322,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const lastQuery = Array.from(cache.keys()).pop() || 'New Delhi';
     fetchWeather(lastQuery);
   }, 30 * 60 * 1000);
+
 });
