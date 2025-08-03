@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecast App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="weather-app">
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search for places ..." aria-label="Search for a location">
+      <button id="search-btn" aria-label="Search">Search</button>
+    </div>
+    <div class="tabs">
+      <span class="tab active" data-tab="today" role="tab" aria-selected="true">Today</span>
+      <span class="tab" data-tab="week" role="tab" aria-selected="false">Week</span>
+    </div>
+    <div class="main-weather" id="today-view">
+      <div class="weather-icon" id="weather-icon">🌤️</div>
+      <div class="temperature" id="temperature">12°C</div>
+      <div class="time-location">
+        <span id="current-time">Sunday, 12:30 PM</span>
+        <span id="location">New Delhi, Delhi, India</span>
+      </div>
+      <div class="condition">
+        <span id="condition-text">Mostly Cloudy</span>
+        <span id="precipitation">🌧️ Rain: 30%</span>
+      </div>
+    </div>
+    <div class="weekly-forecast" id="week-view" style="display: none;">
+      <div class="day" id="day-1">
+        <div class="weather-icon">🌤️</div>
+        <div>Sun</div>
+        <div class="condition-text">Sunny</div>
+        <div><span>15°/3°</span></div>
+        <div class="precipitation">🌧️ 10%</div>
+      </div>
+      <div class="day" id="day-2">
+        <div class="weather-icon">🌧️</div>
+        <div>Mon</div>
+        <div class="condition-text">Light Rain</div>
+        <div><span>12°/7°</span></div>
+        <div class="precipitation">🌧️ 60%</div>
+      </div>
+      <div class="day" id="day-3">
+        <div class="weather-icon">☁️</div>
+        <div>Tue</div>
+        <div class="condition-text">Cloudy</div>
+        <div><span>9°/7°</span></div>
+        <div class="precipitation">🌧️ 20%</div>
+      </div>
+      <div class="day" id="day-4">
+        <div class="weather-icon">🌤️</div>
+        <div>Wed</div>
+        <div class="condition-text">Partly Cloudy</div>
+        <div><span>8°/-1°</span></div>
+        <div class="precipitation">🌧️ 10%</div>
+      </div>
+      <div class="day" id="day-5">
+        <div class="weather-icon">❄️</div>
+        <div>Thu</div>
+        <div class="condition-text">Light Snow</div>
+        <div><span>5°/-2°</span></div>
+        <div class="precipitation">🌨️ 40%</div>
+      </div>
+      <div class="day" id="day-6">
+        <div class="weather-icon">☀️</div>
+        <div>Fri</div>
+        <div class="condition-text">Sunny</div>
+        <div><span>4°/-4°</span></div>
+        <div class="precipitation">🌧️ 5%</div>
+      </div>
+      <div class="day" id="day-7">
+        <div class="weather-icon">☁️</div>
+        <div>Sat</div>
+        <div class="condition-text">Overcast</div>
+        <div><span>3°/-6°</span></div>
+        <div class="precipitation">🌧️ 15%</div>
+      </div>
+    </div>
+    <div class="forecast-summary" id="forecast-summary">
+      Weekly Weather Summary: Expect pleasant conditions this week.
+    </div>
+    <div class="highlights">
+      <h3>Today's Highlights</h3>
+      <div class="highlight-grid">
+        <div class="highlight-card">
+          <h4>UV Index</h4>
+          <div class="gauge" id="uv-index">5</div>
+          <span id="uv-status">Normal 👍</span>
+        </div>
+        <div class="highlight-card">
+          <h4>Wind Status</h4>
+          <div id="wind-speed">7.70 km/h</div>
+          <span id="wind-direction">WSW</span>
+        </div>
+        <div class="highlight-card">
+          <h4>Sunrise & Sunset</h4>
+          <div id="sunrise">6:35 AM <span>+1m 46s</span></div>
+          <div id="sunset">5:42 PM <span>+2m 22s</span></div>
+        </div>
+        <div class="highlight-card">
+          <h4>Humidity</h4>
+          <div id="humidity">12%</div>
+          <span id="humidity-status">Normal 👍</span>
+        </div>
+        <div class="highlight-card">
+          <h4>Visibility</h4>
+          <div id="visibility">5.2 km</div>
+          <span id="visibility-status">Average 😐</span>
+        </div>
+        <div class="highlight-card">
+          <h4>Air Quality</h4>
+          <div id="air-quality">105</div>
+          <span id="air-quality-status">Unhealthy 😷</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
